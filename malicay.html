@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queenie M. Malicay - CV</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1000px;
+            margin: 30px auto;
+            background-color: #fff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .left-side {
+            width: 35%;
+            background: linear-gradient(135deg, #15523E, #1e7e5a);
+            color: #fff;
+            padding: 30px;
+            position: relative;
+        }
+
+        .profile-image {
+            width: 100%;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid rgba(255,255,255,0.2);
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .left-side h2 {
+            margin-bottom: 15px;
+            font-size: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .left-side h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: #93D694;
+        }
+
+        .left-side p, .left-side li {
+            font-size: 15px;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            margin: 30px 0 15px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #93D694;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            padding-bottom: 8px;
+        }
+
+        .contact-info {
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info i {
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .skills-list li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .skills-list li::before {
+            content: '•';
+            color: #93D694;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .right-side {
+            width: 65%;
+            padding: 40px;
+        }
+
+        .header {
+            margin-bottom: 40px;
+        }
+
+        .name {
+            font-size: 36px;
+            color: #15523E;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        .title {
+            color: #777;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .right-side h2 {
+            color: #15523E;
+            font-size: 24px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .right-side h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: #15523E;
+        }
+
+        .right-side section {
+            margin-bottom: 30px;
+        }
+
+        .right-side p {
+            margin: 15px 0;
+            line-height: 1.7;
+        }
+
+        .experience-item {
+            margin-bottom: 25px;
+        }
+
+        .experience-item h4 {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .experience-item span {
+            color: #777;
+            font-size: 14px;
+        }
+
+        .experience-item p {
+            margin: 10px 0;
+        }
+
+        .references {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .reference-item {
+            flex: 1;
+            min-width: 250px;
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+        }
+
+        .reference-item strong {
+            display: block;
+            margin-bottom: 10px;
+            color: #15523E;
+        }
+
+        .buttons {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #15523E;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #093523;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        }
+
+        .btn.secondary {
+            background-color: #666;
+        }
+
+        .btn.secondary:hover {
+            background-color: #444;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .left-side, .right-side {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Left Side -->
+        <div class="left-side">
+            <img src="malicay.jpg" alt="Queenie M. Malicay" class="profile-image">
+            
+            <h2>CONTACT</h2>
+            <p class="contact-info"><i>📞</i> 09101878634</p>
+            <p class="contact-info"><i>📧</i> Malicay.Queenie1029@gmail.com</p>
+            <p class="contact-info"><i>📍</i> Purok-1 Molatuhan Alto Lopez Jaena Misamis Occidental</p>
+
+            <div class="section-title">EDUCATION</div>
+            <p><strong>University of Science and Technology of Southern Philippines</strong><br>Bachelor of Science in Information Technology</p>
+            <p><strong>St. Francis Xavier High School</strong><br>General Academic Strand (2017-2023)</p>
+            <p><strong>Molatuhan Alto Elementary School</strong><br>2011-2016</p>
+
+            <div class="section-title">SKILLS</div>
+            <ul class="skills-list">
+                <li>Creativity</li>
+                <li>Digital Marketing</li>
+                <li>Critical Thinking</li>
+                <li>Leadership</li>
+            </ul>
+
+            <div class="section-title">LANGUAGE</div>
+            <ul class="skills-list">
+                <li>Filipino</li>
+                <li>English</li>
+            </ul>
+        </div>
+
+        <!-- Right Side -->
+        <div class="right-side">
+            <div class="header">
+                <h1 class="name">QUEENIE M. MALICAY</h1>
+                <h3 class="title">Assistant Marketing Manager</h3>
+            </div>
+
+            <section>
+                <h2>ABOUT ME</h2>
+                <p>I am a quick learner with a strong work ethic, and I am confident that my enthusiasm, dedication, and adaptability will allow me to quickly become a valuable asset to your team.</p>
+            </section>
+
+            <section>
+                <h2>EXPERIENCE</h2>
+                <div class="experience-item">
+                    <h4>Work Immersion in Ralph Cafe <span>2023</span></h4>
+                    <p>• Desk staff</p>
+                </div>
+
+                <div class="experience-item">
+                    <h4>Online Assistant Of An Online Seller <span>2020-2022</span></h4>
+                    <p>• Updating product listings</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>REFERENCES</h2>
+                <div class="references">
+                    <div class="reference-item">
+                        <strong>Ralph Cafe</strong>
+                        Manager: Danfer Sumalpong Sorre<br>
+                        <span class="contact-info"><i>📞</i> 0557629126</span><br>
+                        <span class="contact-info"><i>✉️</i> danfer.sumalpong.sorre.742@gmail.com</span>
+                    </div>
+                    <div class="reference-item">
+                        <strong>Shop in All in Online Store</strong>
+                        Xie Lani C Kahama: Store Owner<br>
+                        <span class="contact-info"><i>📞</i> 123-456-7890</span><br>
+                        <span class="contact-info"><i>✉️</i> lanioxie121@gmail.com</span>
+                    </div>
+                </div>
+            </section>
+
+            <div class="buttons">
+                <a href="cv.html" class="btn secondary">Back</a>
+                <a href="caliso.html" class="btn">Next</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

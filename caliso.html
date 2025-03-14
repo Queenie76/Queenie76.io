@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charlene Keen Caliso - CV</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1000px;
+            margin: 30px auto;
+            background-color: #fff;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .left-side {
+            width: 35%;
+            background: linear-gradient(145deg, #15523E, #124534);
+            color: #fff;
+            padding: 30px;
+            position: relative;
+        }
+
+        .left-side img {
+            width: 100%;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid rgba(255,255,255,0.2);
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .left-side h2 {
+            margin-bottom: 15px;
+            font-size: 20px;
+            position: relative;
+            padding-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .left-side h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: #93D694;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .contact-item span {
+            margin-right: 10px;
+            width: 24px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .left-side p, .left-side li {
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+
+        .section-title {
+            margin: 30px 0 15px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #93D694;
+            letter-spacing: 1px;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            padding-bottom: 8px;
+        }
+
+        .education-item {
+            margin-bottom: 20px;
+        }
+
+        .education-item strong {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .skill-badge {
+            background-color: rgba(255,255,255,0.1);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .skill-badge:hover {
+            background-color: rgba(147, 214, 148, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .language-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .language-level {
+            display: flex;
+            gap: 3px;
+        }
+
+        .language-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #93D694;
+        }
+
+        .language-dot.empty {
+            background-color: transparent;
+            border: 1px solid #93D694;
+        }
+
+        .right-side {
+            width: 65%;
+            padding: 40px;
+        }
+
+        .header {
+            margin-bottom: 40px;
+        }
+
+        .name {
+            font-size: 34px;
+            color: #15523E;
+            margin-bottom: 5px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .name strong {
+            color: #1a7a5a;
+        }
+
+        .title {
+            color: #666;
+            font-size: 20px;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+        .right-side h2 {
+            color: #15523E;
+            font-size: 22px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .right-side h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: #15523E;
+        }
+
+        .right-side section {
+            margin-bottom: 35px;
+        }
+
+        .right-side p {
+            margin: 15px 0;
+            line-height: 1.8;
+            color: #444;
+        }
+
+        .experience-item {
+            margin-bottom: 30px;
+            padding-left: 20px;
+            border-left: 3px solid #15523E;
+            position: relative;
+        }
+
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: -9px;
+            top: 0;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #15523E;
+        }
+
+        .experience-item h4 {
+            font-size: 18px;
+            color: #15523E;
+            margin-bottom: 5px;
+        }
+
+        .experience-item em {
+            color: #666;
+            font-size: 15px;
+            font-style: italic;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .experience-list {
+            margin-top: 15px;
+        }
+
+        .experience-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .experience-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #15523E;
+            font-weight: bold;
+        }
+
+        .achievement {
+            background-color: #f8fff8;
+            border-left: 3px solid #93D694;
+            padding: 10px 15px;
+            margin: 15px 0;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .achievement strong {
+            color: #15523E;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .reference-item {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+        }
+
+        .reference-item strong {
+            display: block;
+            margin-bottom: 10px;
+            color: #15523E;
+            font-size: 17px;
+        }
+
+        .reference-contact {
+            display: flex;
+            align-items: center;
+            margin-top: 5px;
+        }
+
+        .reference-contact span {
+            margin-right: 8px;
+        }
+
+        .buttons {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #15523E;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: #0e3c2c;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        }
+
+        .btn.back {
+            background-color: #555;
+        }
+
+        .btn.back:hover {
+            background-color: #444;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                margin: 10px;
+            }
+            .left-side, .right-side {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Left Side -->
+        <div class="left-side">
+            <img src="caliso.jpg" alt="Charlene Keen Caliso">
+
+            <h2>CONTACT</h2>
+            <div class="contact-item">
+                <span>📞</span> 09700444225
+            </div>
+            <div class="contact-item">
+                <span>📧</span> charlenekeencaliso9@gmail.com
+            </div>
+            <div class="contact-item">
+                <span>📍</span> PLARIDEL, MISAMIS OCCIDENTAL
+            </div>
+
+            <div class="section-title">EDUCATION</div>
+            <div class="education-item">
+                <strong>University of Science and Technology of Southern Philippines</strong>
+                Bachelor of Business Management<br>
+                Bachelor of Science in Information Technology
+            </div>
+            <div class="education-item">
+                <strong>High School Graduate</strong>
+                Associate of Science in Information Technology (2016 - 2021)
+            </div>
+
+            <div class="section-title">SKILLS</div>
+            <div class="skills-grid">
+                <div class="skill-badge">SQL</div>
+                <div class="skill-badge">Tableau</div>
+                <div class="skill-badge">Power BI</div>
+                <div class="skill-badge">Data visualization</div>
+                <div class="skill-badge">Statistical analysis</div>
+                <div class="skill-badge">Data mining</div>
+                <div class="skill-badge">Machine learning</div>
+                <div class="skill-badge">Data cleaning</div>
+                <div class="skill-badge">Data preprocessing</div>
+                <div class="skill-badge">Communication</div>
+                <div class="skill-badge">Problem-solving</div>
+                <div class="skill-badge">Teamwork</div>
+            </div>
+
+            <div class="section-title">LANGUAGE</div>
+            <div class="language-item">
+                <span>English</span>
+                <div class="language-level">
+                    <div class="language-dot"></div>
+                    <div class="language-dot"></div>
+                    <div class="language-dot"></div>
+                    <div class="language-dot"></div>
+                    <div class="language-dot"></div>
+                </div>
+            </div>
+            <div class="language-item">
+                <span>Filipino</span>
+                <div class="language-level">
+                    <div class="language-dot"></div>
+                    <div class="language-dot"></div>
+                    <div class="language-dot"></div>
+                    <div class="language-dot"></div>
+                    <div class="language-dot"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side -->
+        <div class="right-side">
+            <div class="header">
+                <h1 class="name">CHARLENE KEEN <strong>CALISO</strong></h1>
+                <h3 class="title">DATA ANALYST</h3>
+            </div>
+
+            <section>
+                <h2>ABOUT ME</h2>
+                <p>I am a highly motivated and results-oriented individual with a strong work ethic and a passion for continuous learning. I possess excellent analytical and problem-solving skills, coupled with a creative approach to tackling challenges. I thrive in collaborative environments and am adept at communicating complex information clearly and concisely.</p>
+            </section>
+
+            <section>
+                <h2>EXPERIENCE</h2>
+                <div class="experience-item">
+                    <h4>Data Analyst Intern</h4>
+                    <em>People Link of Lopez Jaena Inc | June 2015 - August 2022</em>
+                    <ul class="experience-list">
+                        <li>Assisted senior analysts in data cleaning, preprocessing, and analysis</li>
+                        <li>Developed and maintained data visualizations using Tableau</li>
+                        <li>Contributed to the development of reports and presentations for stakeholders</li>
+                    </ul>
+                    <div class="achievement">
+                        <strong>Achievements:</strong>
+                        <ul class="experience-list">
+                            <li>Improved data accuracy by 15% through implementing a new data validation process</li>
+                            <li>Created interactive dashboards that reduced report generation time by 20%</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>REFERENCES</h2>
+                <div class="reference-item">
+                    <strong>People Link of Lopez Jaena</strong>
+                    Company Manager: Lolet Calonod Dagasdagas<br>
+                    <div class="reference-contact">
+                        <span>📞</span> 09700444225
+                    </div>
+                    <div class="reference-contact">
+                        <span>✉️</span> loletdagasdagas@gmail.com
+                    </div>
+                </div>
+            </section>
+
+            <div class="buttons">
+                <a href="malicay.html" class="btn">Back</a>
+                <a href="cv.html" class="btn back">Back to Home</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
